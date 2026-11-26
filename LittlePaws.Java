@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+import java.util.List;
 import java.util.HashMap;
 import java.util.Scanner;
 
@@ -40,6 +42,10 @@ class Cat {
         System.out.println("Happiness: " + happiness);
         System.out.println("Energy: " + energy);
         System.out.println("Cleanliness: " + cleanliness);
+    }
+
+    public String getType() {
+        return type;
     }
 }
 
@@ -152,15 +158,40 @@ public class LittlePaws {
     }
 
     private static void interactWithCat(String action) {
-        System.out.print("Enter your cat's name: ");
-        String name = input.nextLine().trim().toLowerCase();
-
-        Cat cat = cats.get(name);
-
-        if (cat == null) {
-            System.out.println("Cat not found.");
+        if (cats.isEmpty()) {
+            System.out.println("You haven't adopted any cats yet.");
             return;
         }
+
+        List<Cat> catList = new ArrayList<>(cats.values());
+
+        System.out.println("\n--- Select a Cat ---");
+
+        for (int i = 0; i < catList.size(); i++) {
+            Cat cat = catList.get(i);
+
+            System.out.println((i + 1) + ". " 
+                + cat.getName() + " (" + cat.getType() + ")");
+            System.out.println();
+        }
+
+        System.out.print("Choose a cat: ");
+
+        int choice;
+
+        try {
+            choice = Integer.parseInt(input.nextLine());
+        } catch (NumberFormatException e) {
+            System.out.println("Please enter a number.");
+            return;
+        }
+
+        if (choice < 1 || choice > catList.size()) {
+            System.out.println("Invalid cat selection.");
+            return;
+        }
+
+        Cat cat = catList.get(choice - 1);
 
         if (action.equals("feed")) {
             cat.feed();
