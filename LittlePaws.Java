@@ -25,14 +25,27 @@ class Cat {
     }
 
     public void feed() {
-        fullness = Math.min(100, fullness + 20);
-        System.out.println(name + " enjoyed the food!");
+    int oldFullness = fullness;
+
+    fullness = Math.min(100, fullness + 20);
+
+    System.out.println(name + " enjoyed the food!");
+    System.out.println("FULLNESS: " 
+        + oldFullness + " -> " + fullness);
     }
 
     public void play() {
-        happiness = Math.min(100, happiness + 20);
-        energy = Math.max(0, energy - 10);
-        System.out.println(name + " had fun playing!");
+    int oldHappiness = happiness;
+    int oldEnergy = energy;
+
+    happiness = Math.min(100, happiness + 20);
+    energy = Math.max(0, energy - 10);
+
+    System.out.println(name + " had so much fun!");
+    System.out.println("HAPPINESS: " 
+        + oldHappiness + " -> " + happiness);
+    System.out.println("ENERGY: " 
+        + oldEnergy + " -> " + energy);
     }
 
     public void displayStats() {
