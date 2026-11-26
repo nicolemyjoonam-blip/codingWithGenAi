@@ -1,5 +1,6 @@
 ## Little Paws – Virtual Cat Adoption Game
 
+## Problem:
 I would like AI to help me to devise a virtual cat adoption game
 
 written in Java. Users must be able to view various cats, adopt, name
@@ -16,6 +17,6 @@ Object orientated programming will be used and a HashMap will be
 
 implemented to hold information about adopted cats.
 
-##Reflection
+## Reflection:
 
 (To be filled in once the project has been completed)
