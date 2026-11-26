@@ -145,17 +145,52 @@ public class LittlePaws {
     }
 
     private static void viewCats() {
-        if (cats.isEmpty()) {
-            System.out.println("You haven't adopted any cats yet.");
+    if (cats.isEmpty()) {
+        System.out.println("You haven't adopted any cats yet.");
+        return;
+    }
+
+    List<Cat> catList = new ArrayList<>(cats.values());
+
+    while (true) {
+        System.out.println("\n--- Your Adopted Cats ---");
+
+        for (int i = 0; i < catList.size(); i++) {
+            System.out.println((i + 1) + ". " 
+                + catList.get(i).getName());
+            System.out.println();
+        }
+
+        System.out.println("0. Return to main menu");
+        System.out.print("Choose a cat: ");
+
+        int choice;
+
+        try {
+            choice = Integer.parseInt(input.nextLine());
+        } catch (NumberFormatException e) {
+            System.out.println("Please enter a number.");
+            continue;
+        }
+
+        if (choice == 0) {
             return;
         }
 
-        System.out.println("\n--- Your Cats ---");
-
-        for (Cat cat : cats.values()) {
-            cat.displayStats();
+        if (choice < 1 || choice > catList.size()) {
+            System.out.println("Invalid cat selection.");
+            continue;
         }
+
+        Cat cat = catList.get(choice - 1);
+
+        System.out.println("\n--- Cat Profile ---");
+        cat.displayStats();
+
+        System.out.print("\nPress Enter to return to your cats...");
+        input.nextLine();
     }
+
 
     private static void interactWithCat(String action) {
         if (cats.isEmpty()) {
