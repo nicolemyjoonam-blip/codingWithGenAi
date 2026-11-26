@@ -20,6 +20,39 @@ class Cat {
         cleanliness = 100;
     }
 
+    public void displayCatArt() {
+    System.out.println();
+
+    if (type.equals("Orange Tabby")) {
+        System.out.println(" /\\_/\\\\");
+        System.out.println("( o.o )");
+        System.out.println(" > ^ <   Orange Tabby");
+    } 
+    else if (type.equals("Persian")) {
+        System.out.println(" /\\___/\\\\");
+        System.out.println("(  o o  )");
+        System.out.println(" /   ^   \\\\");
+        System.out.println("(_________)  Persian");
+    } 
+    else if (type.equals("Siamese")) {
+        System.out.println(" /\\_/\\\\");
+        System.out.println("( -.- )");
+        System.out.println(" > ^ <   Siamese");
+    } 
+    else if (type.equals("Black Cat")) {
+        System.out.println(" /\\_/\\\\");
+        System.out.println("( o.o )");
+        System.out.println(" > # <   Black Cat");
+    } 
+    else {
+        System.out.println(" /\\_/\\\\");
+        System.out.println("( o.o )");
+        System.out.println(" > ^ <");
+    }
+
+    System.out.println();
+    }
+
     public String getName() {
         return name;
     }
@@ -29,6 +62,7 @@ class Cat {
 
     fullness = Math.min(100, fullness + 20);
 
+    displayCatArt();
     System.out.println(name + " enjoyed the food!");
     System.out.println("FULLNESS: " 
         + oldFullness + " -> " + fullness);
@@ -41,6 +75,7 @@ class Cat {
     happiness = Math.min(100, happiness + 20);
     energy = Math.max(0, energy - 10);
 
+    displayCatArt();
     System.out.println(name + " had so much fun!");
     System.out.println("HAPPINESS: " 
         + oldHappiness + " -> " + happiness);
@@ -49,6 +84,8 @@ class Cat {
     }
 
     public void displayStats() {
+        displayCatArt();
+
         System.out.println("\nName: " + name);
         System.out.println("Type: " + type);
         System.out.println("Fullness: " + fullness);
