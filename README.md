@@ -1,8 +1,21 @@
-# Little Paws: Virtual Cat Adoption Simulator
+## Little Paws – Virtual Cat Adoption Game
 
-## Problem:
-I wish to develop a virtual interactive cat adoption application. Users should be able to view, adopt and name cats and then look after them.
+I would like AI to help me to devise a virtual cat adoption game
 
-There should also be distinct features and behaviour for each cat. The application must monitor a cat’s satiety, mood, vitality and hygiene.
+written in Java. Users must be able to view various cats, adopt, name
 
-Object orientated programming and Java data structures will be used to store and manipulate information relating to adopted cats and their looking after.
+and then care for them.
+
+Different cat types must also each have distinct features and
+
+personality. The programme must monitor a cat’s hunger, mood, energy
+
+level and hygiene.
+
+Object orientated programming will be used and a HashMap will be
+
+implemented to hold information about adopted cats.
+
+##Reflection
+
+(To be filled in once the project has been completed)
