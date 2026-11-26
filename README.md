@@ -19,4 +19,6 @@ implemented to hold information about adopted cats.
 
 ## Reflection:
 
-(To be filled in once the project has been completed)
+I have learnt that by providing detailed information to the GenAI, it can be much easier to produce code. As a result, I was able to dedicate more of my time to designing my cat simulator and less to thinking about how features should be coded. It was also intriguing to see the programme evolve after each prompt that I provided.
+
+Although the code often needed refining, I still needed to analyse why issues were arising. Furthermore, at times it was difficult to ascertain where in the code sections should be added or amended. Despite this, I greatly enjoyed working with GenAI as I was able to design something which appealed to me. Although I believe that AI can be a useful coding tool, it remains vital that an individual understands how code works.
